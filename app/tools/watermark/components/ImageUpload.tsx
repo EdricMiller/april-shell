@@ -53,7 +53,13 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ label, onImageChange, current
 
       {/* Image Preview and Sample Gallery Section */}
       <div className="image-preview-container">
-        {currentImage && (!label.includes('水印图片') || (label.includes('水印图片') && sampleImages && !sampleImages.includes(currentImage))) && (
+        {currentImage && label === '上传底图' && (
+          <div className="image-wrapper">
+            <img src={currentImage} alt="Preview" className="image-preview" />
+          </div>
+        )}
+
+        {currentImage && label.includes('水印图片') && sampleImages && !sampleImages.includes(currentImage) && (
           <div className="image-wrapper selected">
             <img src={currentImage} alt="Preview" className="image-preview" />
             <span className="selected-check">✓ 已选中</span>

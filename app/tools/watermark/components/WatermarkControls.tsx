@@ -42,7 +42,11 @@ const WatermarkControls: React.FC<WatermarkControlsProps> = ({
   ];
 
   const sampleWatermarkImages = [
-    '/common/logo.png',
+    '/common/logo1.png',
+    '/common/logo2.png',
+    '/common/logo3.png',
+    '/common/logo4.png',
+    '/common/logo5.png',
   ];
 
   return (
